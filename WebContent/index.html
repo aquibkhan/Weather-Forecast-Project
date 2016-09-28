@@ -1,0 +1,34 @@
+<!doctype html>
+<html ng-app="weather">
+    <head>
+        <title>Weather Forecast</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/weather.css">
+
+    </head>
+    <body>
+     <div class="main" ng-controller="weatherController">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-7">
+            <h1>Weather Forecast</h1>
+             <label for="Autocomplete">Enter City</label>
+             <input type="text" id="Autocomplete" class="form-control" ng-model="city" ng-autocomplete="result1" details="details1" options="options1"/>
+            <div>
+	         <button class="btn btn-primary" ng-click="result(city)">get weather</button>
+	         <p><b>Temprature : </b>{{cityWeather}}&deg;C</p>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- External JavaScripts -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&key= AIzaSyATIYjkxB-_6HGyELMLuT4Yp9yRQdKQLII "></script>
+        <script type="text/javascript" src="js/vendors/angular.min.js"></script>
+        
+        <script src="app/components/main.js"></script>
+        <script src="app/components/weather-service.js"></script>
+        <script src="app/components/ngAutocomplete.js"></script>
+    </body>
+</html>
