@@ -1,0 +1,30 @@
+<!doctype html>
+<html ng-app="weatherApp">
+    <head>
+        <title>Weather Forecast</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/bootstrap.min.css">        
+		<link rel="stylesheet" href="css/login.css">
+		<link rel="stylesheet" href="css/weather.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="container">
+                <div class="row">
+                    <div ng-view></div>
+                </div>
+            </div>
+        </div>
+        <!-- External JavaScripts -->
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false&key= AIzaSyATIYjkxB-    _6HGyELMLuT4Yp9yRQdKQLII "></script>
+        <script type="text/javascript" src="js/vendors/angular.min.js"></script>
+		<script type="text/javascript" src="js/vendors/angular-route.js"></script>
+        <script src="app/weatherApp.js"></script>
+		<script src="app/login/component/login.config.js"></script>
+		<script src="app/login/component/login.controller.js"></script>
+		<script src="app/weather-forecast/component/weather.config.js"></script>
+		<script src="app/weather-forecast/component/weather.controller.js"></script>
+        <script src="app/weather-forecast/component/weather.service.js"></script>
+        <script src="app/weather-forecast/component/ngAutocomplete.directive.js"></script>
+    </body>
+</html>

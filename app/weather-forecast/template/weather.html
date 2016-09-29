@@ -1,0 +1,13 @@
+<div class="col-sm-5 col-sm-offset-7">
+	<h1>Weather Forecast</h1>
+	<label for="Autocomplete">Enter City</label>
+	<input type="text" id="Autocomplete" class="form-control" ng-model="weatherController.city" ng-autocomplete="result1" 
+		details="details1" options="options1"/>
+	<div>
+		<button class="btn btn-primary" ng-click="weatherController.getWeatherInfo()">get weather</button>
+		<p><b>Temprature : </b>{{weatherController.cityWeather}}&deg;C</p>
+		<p><b>Description : </b>{{weatherController.description}} <img src = "{{iconUrl}}"></p>
+		<p><b>Humidity : </b>{{weatherController.humidity}}</p>
+		<p><b>Pressure : </b>{{weatherController.pressure}}</p>
+	</div>
+</div>
